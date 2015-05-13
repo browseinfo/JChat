@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="center"
+    android:layout_margin="@dimen/layout_box_margin"
+    android:gravity="center"
+    android:orientation="vertical" >
+
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/field_margin"
+        android:text="Get Started"
+        android:textSize="@dimen/text_large"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/field_margin"
+        android:text="Already have a team?"
+        android:textStyle="bold" />
+
+    <Button
+        android:id="@+id/btnSignIn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/field_margin"
+        android:background="@drawable/button_blue_style"
+        android:text="@string/label_sign_in"
+        android:textColor="@color/text_white"
+        android:textStyle="bold" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/field_margin"
+        android:orientation="horizontal"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:weightSum="5"
+         >
+
+        
+        <View
+            android:id="@+id/viewLeftLine"
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:layout_weight="2"
+            android:layout_gravity="center_vertical"
+            android:background="@drawable/horizontal_line" />
+
+		<TextView
+            android:id="@+id/tvOR"
+            android:layout_width="20dp"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/viewLeftLine"
+            android:layout_margin="@dimen/field_margin"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:text=" or "
+            android:textStyle="bold" />
+        
+        <View
+            android:id="@+id/viewRightLine"
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:layout_weight="2"
+            android:layout_gravity="center_vertical"
+            android:layout_toRightOf="@id/tvOR"
+            android:layout_toEndOf="@id/tvOR"
+            android:background="@drawable/horizontal_line_reverse" />
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btnCreateNewTeam"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/field_margin"
+        android:background="@drawable/button_green_style"
+        android:text="@string/label_create_new_team"
+        android:textColor="@color/text_white"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/activity_horizontal_margin"
+        android:gravity="center"
+        android:text="@string/new_team_text"
+        android:textStyle="bold" />
+
+</LinearLayout>

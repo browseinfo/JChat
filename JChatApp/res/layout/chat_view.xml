@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:id="@+id/form"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:orientation="vertical" >
+
+    <ListView
+        android:id="@+id/chatHistory"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="30dp">
+    </ListView>
+</RelativeLayout>
+    <RelativeLayout
+        android:id="@+id/chatBox"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:padding="@dimen/field_margin"
+        android:orientation="horizontal" >
+
+        <ImageButton
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:text="Upload"
+            android:background="@drawable/ic_upload"
+            android:id="@+id/btnUploadDialog"
+            android:layout_alignBottom="@+id/chatText"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true" />
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:inputType="textMultiLine"
+            android:id="@+id/chatText"
+            android:textSize="@dimen/text_small"
+            android:hint="@string/hint_chat_text"
+            android:layout_alignParentBottom="true"
+            android:layout_toRightOf="@id/btnUploadDialog"
+            android:layout_toLeftOf="@+id/btnSend" />
+
+        <ImageButton
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:text="Send"
+            android:id="@+id/btnSend"
+            android:background="@drawable/ic_send"
+            android:layout_alignBottom="@+id/chatText"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true" />
+    </RelativeLayout>
+
+</RelativeLayout>

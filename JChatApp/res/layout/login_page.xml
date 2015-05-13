@@ -1,0 +1,67 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent" 
+    android:orientation="vertical"
+    >
+
+    <TextView
+        android:id="@+id/tx_slack_signin"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="Sign in" 
+        android:textSize="30sp"/>
+    <TextView
+        android:id="@+id/tx_domain_name"
+        android:layout_width="match_parent"
+        android:gravity="center"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:text="Enter Your Team's Domain Name" 
+        android:textSize="15sp"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center">
+          
+          <EditText
+              android:id="@+id/etTeamDomain"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:layout_alignParentLeft="true"
+              android:layout_alignParentTop="true"
+              android:layout_gravity="center"
+              android:layout_marginTop="15dp"
+              android:inputType="text"
+            >
+
+              <requestFocus />
+          </EditText>
+
+          <TextView
+              android:id="@+id/txDomainName"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:layout_alignBaseline="@+id/etTeamDomain"
+              android:layout_alignBottom="@+id/etTeamDomain"
+              android:layout_toRightOf="@+id/etTeamDomain"
+              android:text="@string/label_domain_name"
+              android:layout_marginTop="15dp"
+              android:textSize="15dp" />
+          
+    </RelativeLayout>
+
+    <Button
+        android:id="@+id/btnLogIn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:text="@string/label_continue"
+        android:textColor="@color/text_white"
+        android:background="@drawable/button_blue_style"
+        android:layout_gravity="center"
+        android:layout_margin="@dimen/field_margin"
+      />
+   
+</LinearLayout>

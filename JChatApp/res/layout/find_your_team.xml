@@ -1,0 +1,64 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent" 
+    android:orientation="vertical"
+    android:layout_margin="@dimen/layout_box_margin"
+    >
+
+    <TextView
+        android:id="@+id/tx_slack_signin"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="@string/find_team_text" 
+        android:textSize="30sp"/>
+    <TextView
+        android:id="@+id/tx_slack_domain_name"
+        android:layout_width="match_parent"
+        android:gravity="center"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:text="@string/find_team_email_text" 
+        android:textSize="@dimen/text_medium_top"/>
+
+    
+          
+          <EditText
+              android:id="@+id/et_slack_signin"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:layout_alignParentLeft="true"
+              android:layout_alignParentTop="true"
+              android:layout_gravity="center"
+              android:layout_marginTop="15dp"
+              android:hint="Your email address"
+              android:ems="8" >
+              
+
+              <requestFocus />
+          </EditText>
+
+          
+    <Button
+        android:id="@+id/btn_slack_signin"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:text="Find my team"
+        android:textColor="@color/text_white"
+        android:background="@drawable/button_blue_style"
+        android:layout_gravity="center"
+        android:layout_margin="@dimen/field_margin"
+        android:textSize="20dp" />
+    <TextView
+        android:id="@+id/tx_slack_domain_name"
+        android:layout_width="match_parent"
+        android:gravity="center"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:text="@string/find_team_emaillink_text" 
+        
+        android:textSize="@dimen/text_medium_bottom"
+        />
+     
+</LinearLayout>

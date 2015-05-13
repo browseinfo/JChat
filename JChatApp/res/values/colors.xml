@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="blue_dark">#002FA7</color>
+    <color name="green_dark">#FF138808</color>
+    <color name="button_blue">#FF439FE0</color>
+    <color name="button_green">#FF2AB27B</color>
+    <color name="button_blue_pressed">#CF439FE0</color>
+    <color name="button_green_pressed">#CF2AB27B</color>
+    <color name="text_white">#FFFFFF</color>
+    <color name="text_black">#000000</color>
+    <color name="sidebar_background_dark">#4D5250</color>
+    <color name="sidebar_text">#FFFFFF</color>
+    <color name="border_grey">#D3D2D0</color>
+    <color name="bg_grey_light">#EBEBEA</color>
+    
+</resources>
