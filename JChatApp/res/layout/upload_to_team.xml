@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <EditText
+        android:id="@+id/editText1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/layout_box_margin"
+        android:padding="@dimen/layout_box_margin" 
+        android:hint="Title"
+        >
+
+        <requestFocus />
+    </EditText>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+       android:background="@drawable/horizontal_border" />
+
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+         android:layout_margin="@dimen/layout_box_margin"
+        android:text="Share To: None"
+        android:padding="@dimen/layout_box_margin"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:background="@drawable/horizontal_border" />
+
+    <EditText
+        android:id="@+id/editText2"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="@dimen/layout_box_margin"
+        android:padding="@dimen/layout_box_margin"
+        android:gravity="top"
+        android:inputType="textMultiLine"
+        android:hint="Comment (Optional)" />
+ 
+</LinearLayout>

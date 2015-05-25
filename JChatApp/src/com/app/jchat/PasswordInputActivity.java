@@ -2,6 +2,7 @@ package com.app.jchat;
 
 import android.app.Activity;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.View;
@@ -16,14 +17,16 @@ public class PasswordInputActivity extends Activity {
 //	EditText etPassword;
 //	DatabaseHelper db;
 	boolean b = true;
+	String userEmailAddress="";
 
 	@Override
 	protected void onCreate(Bundle savedInstance) {
 		super.onCreate(savedInstance);
 		setContentView(R.layout.password_page);
 		
+		Intent intent = getIntent();
 		btnContinue = (Button) findViewById(R.id.btnContinue);
-
+		userEmailAddress = intent.getStringExtra("userEmail");
 		setButtonClickListener();
 
 	}
@@ -35,6 +38,7 @@ public class PasswordInputActivity extends Activity {
 			@Override
 			public void onClick(View v) {
 				// TODO Auto-generated method stub
+				SaveUserSession.setUserName(getApplicationContext(), userEmailAddress);
 				Intent mainActivity = new Intent(getApplicationContext(), MainActivity.class); 
 				startActivity(mainActivity);
 				finish();

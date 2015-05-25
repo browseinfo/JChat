@@ -9,6 +9,6 @@
 	<dimen name="text_medium_top">17sp</dimen>
 	<dimen name="text_medium_bottom">15sp</dimen>
 	<dimen name="text_small">14sp</dimen>
-	<dimen name="sidebar_left_list_item_padding">2dp</dimen>
+	<dimen name="sidebar_left_list_item_padding">3dp</dimen>
 	<dimen name="sidebar_right_list_item_padding">10dp</dimen>
 </resources>

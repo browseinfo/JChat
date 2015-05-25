@@ -16,7 +16,7 @@
         android:id="@+id/chatHistory"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_marginBottom="30dp">
+        android:layout_marginBottom="40dp">
     </ListView>
 </RelativeLayout>
     <RelativeLayout
@@ -25,6 +25,7 @@
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:layout_alignParentLeft="true"
+        android:layout_below="@id/form"
         android:padding="@dimen/field_margin"
         android:orientation="horizontal" >
 

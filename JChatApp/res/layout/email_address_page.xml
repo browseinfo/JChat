@@ -1,64 +1,58 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="fill_parent"
-    android:layout_height="fill_parent" 
-    android:orientation="vertical"
+    android:layout_height="fill_parent"
     android:layout_margin="@dimen/layout_box_margin"
-    >
+    android:orientation="vertical" >
 
     <TextView
         android:id="@+id/tx_slack_signin"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:gravity="center"
-        android:text="@string/title_email_address_text" 
-        android:textSize="30sp"/>
+        android:text="@string/title_email_address_text"
+        android:textSize="30sp" />
+
     <TextView
         android:id="@+id/tx_slack_domain_name"
         android:layout_width="match_parent"
-        android:gravity="center"
         android:layout_height="wrap_content"
         android:layout_marginTop="15dp"
-        android:text="@string/lable_email_address" 
-        android:textSize="@dimen/text_medium_top"/>
+        android:gravity="center"
+        android:text="@string/lable_email_address"
+        android:textSize="@dimen/text_medium_top" />
 
-    
-          
-          <EditText
-              android:id="@+id/et_slack_signin"
-              android:layout_width="match_parent"
-              android:layout_height="wrap_content"
-              android:layout_alignParentLeft="true"
-              android:layout_alignParentTop="true"
-              android:layout_gravity="center"
-              android:hint="Your email address"
-              android:layout_marginTop="15dp"
-              android:ems="8" >
-              
+    <EditText
+        android:id="@+id/etEmailAddress"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_gravity="center"
+        android:layout_marginTop="15dp"
+        android:hint="Your email address" >
 
-              <requestFocus />
-          </EditText>
+        <requestFocus />
+    </EditText>
 
-          
     <Button
         android:id="@+id/btnContinue"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="15dp"
-        android:text="@string/label_continue"
-        android:textColor="@color/text_white"
-        android:background="@drawable/button_blue_style"
         android:layout_gravity="center"
         android:layout_margin="@dimen/field_margin"
+        android:layout_marginTop="15dp"
+        android:background="@drawable/button_blue_style"
+        android:text="@string/label_continue"
+        android:textColor="@color/text_white"
         android:textSize="20dp" />
+
     <TextView
-        android:id="@+id/tx_slack_domain_name"
+        android:id="@+id/tvPrivacyPolicyText"
         android:layout_width="match_parent"
-        android:gravity="center"
         android:layout_height="wrap_content"
         android:layout_marginTop="15dp"
-        android:text="@string/privacy_policy_text" 
-        android:textSize="@dimen/text_medium_bottom"
-        />
-    
-   
+        android:gravity="center"
+        android:text="@string/privacy_policy_text"
+        android:textSize="@dimen/text_medium_bottom" />
+
 </LinearLayout>

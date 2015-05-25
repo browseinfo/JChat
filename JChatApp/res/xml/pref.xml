@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <PreferenceCategory
+        android:key="checkbox_pref"
+        android:title="Choose the message for which you&apos;d like to receive puch notifications" >
+
+        <CheckBoxPreference
+            android:defaultValue="true"
+            android:key="pref_opt1"
+            android:summary="All Messages" />
+
+        <CheckBoxPreference
+            android:defaultValue="true"
+            android:key="pref_opt2"
+            android:summary="Only direct messages mentions" />
+
+        <CheckBoxPreference
+            android:defaultValue="true"
+            android:key="pref_opt3"
+            android:summary="Only mentions of my name or highlight word" />
+
+        <CheckBoxPreference
+            android:defaultValue="true"
+            android:key="pref_opt4"
+            android:summary="Only direct messages" />
+
+        <CheckBoxPreference
+            android:defaultValue="true"
+            android:key="pref_opt5"
+            android:summary="Nothing (push verifications off)" />
+    </PreferenceCategory>
+
+    <PreferenceCategory
+        android:summary="Jchtapp"
+        android:title="vibration" >
+
+        <CheckBoxPreference
+            android:key="checkBox"
+            android:summary="Also vibration when notification are received"
+            android:title="" />
+    </PreferenceCategory>
+
+</PreferenceScreen>

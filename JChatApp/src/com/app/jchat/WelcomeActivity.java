@@ -17,6 +17,12 @@ public class WelcomeActivity extends Activity {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.home_page);
 
+//		if(SaveUserSession.containsKey(getApplicationContext(), SaveUserSession.PREF_USER_NAME)){
+			if(!SaveUserSession.getUserName(getApplicationContext()).equalsIgnoreCase("")){
+			Intent nextActivityIntent = new Intent(WelcomeActivity.this, MainActivity.class);
+			startActivity(nextActivityIntent);
+			finish();
+		}
 		btnSignIn = (Button) findViewById(R.id.btnSignIn);
 		btnCreateNewTeam = (Button) findViewById(R.id.btnCreateNewTeam);
 

@@ -1,36 +1,28 @@
 <?xml version="1.0" encoding="utf-8"?>
 <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
-    android:title="Setting"
-     >
-    
-<PreferenceScreen
-    android:title="Team"
-    
-    android:key="setting_team">
-    </PreferenceScreen>
-    <SwitchPreference
-        android:key="setting_status"
-        
-        android:title="Your Status"
-        
-        android:disableDependentsState="true"
-        android:switchTextOn="Active"
-        android:switchTextOff="Away">
-        </SwitchPreference>
-        
-        <PreferenceScreen
-    android:title="Display"
-   
-    
-    android:key="setting_display">
-    <intent android:action="android.intent.action.Display">
-        </intent>
-    
-    
-    </PreferenceScreen>
+    android:title="Settings" >
+
     <PreferenceScreen
-    android:title="Push Notification Settings"
-    
-    android:key="setting_notification">
+        android:key="setting_team"
+        android:title="Team" >
     </PreferenceScreen>
+
+    <SwitchPreference
+        android:disableDependentsState="true"
+        android:key="setting_status"
+        android:switchTextOff="Away"
+        android:switchTextOn="Active"
+        android:title="Your Status" >
+    </SwitchPreference>
+
+    <PreferenceScreen
+        android:key="setting_display"
+        android:title="Display" >
+    </PreferenceScreen>
+    
+    <PreferenceScreen
+        android:key="setting_notification"
+        android:title="Push Notification Settings" >
+    </PreferenceScreen>
+
 </PreferenceScreen>

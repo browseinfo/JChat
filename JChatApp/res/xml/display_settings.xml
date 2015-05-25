@@ -27,7 +27,7 @@
         
     
         <CheckBoxPreference
-            android:title="Show inline prevews for links to images"
+            android:title="Show inline previews for links to images"
             android:key="display_setting_links_image"
             android:shouldDisableView="true"
             android:defaultValue="false">

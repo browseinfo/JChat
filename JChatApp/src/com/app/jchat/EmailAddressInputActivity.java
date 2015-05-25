@@ -7,12 +7,13 @@ import android.view.Menu;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
+import android.widget.EditText;
 
 public class EmailAddressInputActivity extends Activity {
 
 	Button btnContinue;
 
-//	EditText etUsername;
+	EditText etEmailAddress;
 //	EditText etPassword;
 //	DatabaseHelper db;
 	boolean b = true;
@@ -22,6 +23,7 @@ public class EmailAddressInputActivity extends Activity {
 		super.onCreate(savedInstance);
 		setContentView(R.layout.email_address_page);
 		
+		etEmailAddress = (EditText)findViewById(R.id.etEmailAddress);
 		btnContinue = (Button) findViewById(R.id.btnContinue);
 
 		setButtonClickListener();
@@ -35,7 +37,8 @@ public class EmailAddressInputActivity extends Activity {
 			@Override
 			public void onClick(View v) {
 				// TODO Auto-generated method stub
-				Intent passwordActivity = new Intent(getApplicationContext(), PasswordInputActivity.class); 
+				Intent passwordActivity = new Intent(getApplicationContext(), PasswordInputActivity.class);
+				passwordActivity.putExtra("userEmail", etEmailAddress.getText().toString().trim());
 				startActivity(passwordActivity);
 				finish();
 			}
