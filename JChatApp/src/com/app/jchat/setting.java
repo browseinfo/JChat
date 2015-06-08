@@ -54,7 +54,7 @@ public class setting extends PreferenceActivity {
 			public boolean onPreferenceClick(Preference arg0) {
 				// TODO Auto-generated method stub
 				Intent i = new Intent(setting.this, SetPrefActivity.class);
-				startActivity(i);
+				startActivityForResult(i, 0);
 				return true;
 
 			}

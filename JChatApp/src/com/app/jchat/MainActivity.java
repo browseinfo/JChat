@@ -2,7 +2,6 @@ package com.app.jchat;
 
 import java.util.ArrayList;
 
-import android.os.Bundle;
 import android.app.Activity;
 import android.app.AlertDialog;
 import android.app.Fragment;
@@ -10,6 +9,7 @@ import android.app.FragmentManager;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.os.Bundle;
 import android.support.v4.app.ActionBarDrawerToggle;
 import android.support.v4.widget.DrawerLayout;
 import android.util.Log;
@@ -23,11 +23,11 @@ import android.widget.BaseAdapter;
 import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.ImageView;
-import android.widget.LinearLayout;
 import android.widget.ListView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
-import android.widget.Toast;
+
+import com.app.jchat.socket.ChatMessage;
 
 public class MainActivity extends Activity {
 
@@ -40,6 +40,7 @@ public class MainActivity extends Activity {
 
 	ArrayList<NavItem> mNavItems = new ArrayList<NavItem>();
 	ArrayList<NavItem> mNavRightItems = new ArrayList<NavItem>();
+	ArrayList<ChatMessage> messageList;
 	private ChatArrayAdapter chatArrayAdapter;
 
 	ImageButton btnSendMsg, btnUpload;
@@ -136,21 +137,10 @@ public class MainActivity extends Activity {
 		};
 
 		mDrawerLayout.setDrawerListener(mDrawerToggle);
-
+		
 	}
 
-	protected boolean sendChatMessage() {
-		// TODO Auto-generated method stub
-		if (!etChatText.getText().equals("")) {
-			chatArrayAdapter.add(new ChatMessage(side, etChatText.getText()
-					.toString(), getResources().getDrawable(
-							R.drawable.ic_launcher)));
-			etChatText.setText("");
-		}
-		// side = !side;
-		return true;
-	}
-
+	
 	// Called when invalidateOptionsMenu() is invoked
 	public boolean onPrepareOptionsMenu(Menu menu) {
 		// If the nav drawer is open, hide action items related to the content
@@ -172,7 +162,7 @@ public class MainActivity extends Activity {
 			fragment = prefFragment;
 			break;
 		case 4:
-			ChatViewFragment chatViewFragment = new ChatViewFragment(this);
+			ChatViewFragment chatViewFragment = new ChatViewFragment(this,mNavItems.get(position).mTitle);
 			fragment = chatViewFragment;
 			// View view = chatViewFragment.getView();
 			// btnSendMsg = chatViewFragment.getBtnSendMsg();

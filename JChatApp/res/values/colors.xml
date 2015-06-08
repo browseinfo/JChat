@@ -12,5 +12,6 @@
     <color name="sidebar_text">#FFFFFF</color>
     <color name="border_grey">#D3D2D0</color>
     <color name="bg_grey_light">#EBEBEA</color>
-    
+    <color name="chat_bg_left">#DCF7FF</color>
+    <color name="chat_bg_right">#C2FFC2</color>    
 </resources>

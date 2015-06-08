@@ -86,7 +86,7 @@
             android:name=".displa"
             android:label="@string/app_name" >
             <intent-filter>
-                <action android:name="android.intent.action.Display" />
+                <action android:name="android.intent.action.VIEW" />
 
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
@@ -95,7 +95,7 @@
             android:name=".setting"
             android:label="@string/app_name" >
             <intent-filter>
-                <action android:name="android.intent.action.Display" />
+                <action android:name="android.intent.action.VIEW" />
 
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
@@ -104,7 +104,7 @@
             android:name=".title"
             android:label="@string/app_name" >
             <intent-filter>
-                <action android:name="android.intent.action.Display" />
+                <action android:name="android.intent.action.VIEW" />
 
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
@@ -112,6 +112,11 @@
         <activity
             android:name=".UploadToTeamActivity"
             android:label="@string/title_activity_upload_to_team" >
+             <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
         </activity>
     </application>
 

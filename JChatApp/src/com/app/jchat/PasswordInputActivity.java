@@ -2,7 +2,6 @@ package com.app.jchat;
 
 import android.app.Activity;
 import android.content.Intent;
-import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.View;
@@ -38,7 +37,7 @@ public class PasswordInputActivity extends Activity {
 			@Override
 			public void onClick(View v) {
 				// TODO Auto-generated method stub
-				SaveUserSession.setUserName(getApplicationContext(), userEmailAddress);
+				UserSession.setSessionId(getApplicationContext(), userEmailAddress);
 				Intent mainActivity = new Intent(getApplicationContext(), MainActivity.class); 
 				startActivity(mainActivity);
 				finish();

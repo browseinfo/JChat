@@ -1,13 +1,10 @@
 package com.app.jchat;
 
-import android.app.Activity;
 import android.os.Bundle;
 import android.preference.CheckBoxPreference;
 import android.preference.Preference;
 import android.preference.Preference.OnPreferenceChangeListener;
 import android.preference.PreferenceActivity;
-import android.view.Menu;
-import android.view.MenuItem;
 
 public class SetPrefActivity extends PreferenceActivity  {
 	CheckBoxPreference pref_opt1;

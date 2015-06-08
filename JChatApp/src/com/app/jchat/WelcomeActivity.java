@@ -1,8 +1,8 @@
 package com.app.jchat;
 
-import android.os.Bundle;
 import android.app.Activity;
 import android.content.Intent;
+import android.os.Bundle;
 import android.view.Menu;
 import android.view.View;
 import android.view.View.OnClickListener;
@@ -18,7 +18,7 @@ public class WelcomeActivity extends Activity {
 		setContentView(R.layout.home_page);
 
 //		if(SaveUserSession.containsKey(getApplicationContext(), SaveUserSession.PREF_USER_NAME)){
-			if(!SaveUserSession.getUserName(getApplicationContext()).equalsIgnoreCase("")){
+			if(!UserSession.getSessionId(getApplicationContext()).equalsIgnoreCase("")){
 			Intent nextActivityIntent = new Intent(WelcomeActivity.this, MainActivity.class);
 			startActivity(nextActivityIntent);
 			finish();
